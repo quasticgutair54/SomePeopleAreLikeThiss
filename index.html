@@ -8,29 +8,30 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <audio autoplay loop>
-    <source src="Stalling(MP3_160K).mp3" type="audio/mpeg">
-    Your browser does not support background audio.
-  </audio>
+<audio autoplay loop>
+  <source src="Stalling(MP3_160K).mp3" type="audio/mpeg" />
+  Your browser does not support the audio element.
+</audio>
 
   <div class="container">
     <h1 class="main-title">Choose Your Attitude</h1>
     <p class="subtitle">This isn’t just a quiz. It’s a rebellion simulator. ✊🦜</p>
 
-    <div class="choice-container">
+    <div class="choice-container" style="display:flex;gap:40px;justify-content:center;flex-wrap:wrap;">
       <!-- Curious Section -->
-      <div class="choice-box curious-box">
+      <div class="choice-box curious-box" style="text-align:center;">
         <img src="Bird_Curious.jpeg" alt="Curious Bird" class="bird-image"/>
-        <button onclick="location.href='curious-q1.html'">🟢 I’m Curious</button>
+        <br>
+        <button class="btn" onclick="location.href='curious-q1.html'">🟢 I’m Curious</button>
       </div>
 
       <!-- Judgmental Section -->
-      <div class="choice-box judgmental-box">
+      <div class="choice-box judgmental-box" style="text-align:center;">
         <img src="Bird_judgemental..jpeg" alt="Judgmental Bird" class="bird-image"/>
-        <button onclick="location.href='judgmental-q1.html'">🔴 I’m Judgmental</button>
+        <br>
+        <button class="btn" onclick="location.href='judgmental-q1.html'">🔴 I’m Judgmental</button>
       </div>
     </div>
   </div>
 </body>
 </html>
-
