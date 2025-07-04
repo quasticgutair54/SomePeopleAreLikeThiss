@@ -1,13 +1,19 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #ffffff;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
   color: #111;
-  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  transition: background 0.5s ease-in-out;
 }
 
-body.index {
-  background: linear-gradient(135deg, #ffe600, #a8ff78);
+body.neutral {
+  background: #f4f4f4;
 }
 
 body.curious {
@@ -19,91 +25,30 @@ body.judgmental {
   color: #fff;
 }
 
+h1 {
+  font-family: 'Permanent Marker', cursive;
+}
+
 .container {
   max-width: 600px;
-  margin: 50px auto;
   padding: 20px;
-  text-align: center;
 }
 
-h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.intro-question {
-  font-size: 1.25rem;
-  margin-bottom: 30px;
-}
-
-.image-select {
-  display: flex;
-  justify-content: space-around;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.option {
-  text-align: center;
-}
-
-.option img {
-  width: 200px;
-  height: auto;
-  border-radius: 12px;
-  margin-bottom: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-button {
-  background-color: #111;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-button:hover {
-  background-color: #444;
-}
-
-select {
-  padding: 10px;
-  font-size: 1rem;
-  margin-top: 20px;
-  border-radius: 6px;
-}
-
-.next-btn {
-  margin-top: 30px;
-  display: inline-block;
-} 
-
-.final-verdict {
-  font-size: 1.3rem;
-  margin-top: 30px;
-  padding: 20px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 10px;
-  border: 2px dashed #fff;
-}
-
-.cta {
-  margin-top: 20px;
-  display: inline-block;
-  font-weight: bold;
-  background: #000;
+.btn {
+  background: #111;
   color: #fff;
-  padding: 10px 20px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
   border-radius: 8px;
-  text-decoration: none;
 }
 
-/* Parrot Emoji Reaction */
-.parrot {
-  font-size: 2rem;
-  margin-top: 20px;
+.btn:hover {
+  background: #333;
+}
+
+.hidden {
+  display: none;
 }
