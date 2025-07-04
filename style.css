@@ -4,38 +4,31 @@ body {
   font-family: 'Roboto', sans-serif;
   background: #f4f4f4;
   color: #111;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
   text-align: center;
-  transition: background 0.5s ease-in-out;
 }
 
-body.curious {
-  background: linear-gradient(135deg, #d4fc79, #96e6a1);
-}
-
-body.judgmental {
-  background: linear-gradient(135deg, #6f1d1b, #e0c097);
-  color: #fff;
-}
-
-h1 {
+.main-title {
   font-family: 'Permanent Marker', cursive;
-  font-size: 2.2rem;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  margin-top: 40px;
 }
 
-p {
-  font-size: 1.1rem;
+.subtitle {
+  font-size: 1.2rem;
   margin-bottom: 30px;
 }
 
 .container {
-  max-width: 600px;
-  padding: 20px;
+  padding: 30px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.choice-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -46,6 +39,7 @@ p {
   cursor: pointer;
   font-size: 16px;
   border-radius: 8px;
+  margin-top: 10px;
   transition: background 0.3s ease;
 }
 
@@ -53,19 +47,22 @@ p {
   background: #333;
 }
 
+.bird-image {
+  width: 150px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  margin-bottom: 10px;
+}
+
 select {
+  font-size: 1rem;
   padding: 10px;
-  font-size: 16px;
-  border-radius: 6px;
   margin-top: 20px;
 }
 
 .final-verdict {
-  font-size: 1.2rem;
-  margin-top: 30px;
-  padding: 20px;
-  border-radius: 10px;
-  border: 2px dashed #fff;
+  margin-top: 20px;
+  font-weight: bold;
 }
 
 .cta {
@@ -76,16 +73,9 @@ select {
   padding: 10px 20px;
   border-radius: 8px;
   text-decoration: none;
-  font-weight: bold;
 }
 
 .parrot {
   font-size: 2rem;
   margin-top: 20px;
 }
-
-.hidden {
-  display: none;
-}
-
- 
