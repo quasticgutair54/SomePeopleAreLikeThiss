@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Feather of Rebellion</title>
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-<body id="quizBody" class="neutral">
+<body class="neutral">
   <audio id="bg-music" autoplay loop>
     <source src="Stalling(MP3_160K).mp3" type="audio/mpeg" />
     Your browser does not support the audio element.
@@ -16,53 +16,10 @@
   <div class="container" id="page1">
     <h1>You scanned a bird. Curious or judgmental?</h1>
     <p>Choose a side:</p>
-    <button class="btn" onclick="goToPage2('curious')">I’m curious</button>
-    <button class="btn" onclick="goToPage2('judgmental')">I’m judgmental</button>
+    <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+      <button class="btn" onclick="location.href='curious-q1.html'">I’m curious 🟢</button>
+      <button class="btn" onclick="location.href='judgmental-q1.html'">I’m judgmental 🔴</button>
+    </div>
   </div>
-
-  <div class="container hidden" id="page2">
-    <h1 id="page2-title"></h1>
-    <p>
-      Society stitched conformity into our sleeves. We ripped it off.<br>
-      We’re not selling clothes. We’re handing out feathers of rebellion.
-    </p>
-    <button class="btn" onclick="goToPage3()">Continue</button>
-  </div>
-
-  <div class="container hidden" id="page3">
-    <h1>Style Alignment Quiz</h1>
-    <form id="quizForm">
-      <p>1. Do you wear what you like, or what's expected?</p>
-      <select name="q1">
-        <option value="rebel">What I like</option>
-        <option value="normie">What's expected</option>
-      </select>
-
-      <p>2. Have you ever been called 'too much'?</p>
-      <select name="q2">
-        <option value="rebel">Hell yes</option>
-        <option value="normie">No, I’m pretty safe</option>
-      </select>
-
-      <p>3. Parrot shirt at a funeral?</p>
-      <select name="q3">
-        <option value="rebel">If it’s fabulous, yes</option>
-        <option value="normie">That’s too much</option>
-      </select>
-
-      <br><br>
-      <button class="btn" type="button" onclick="showResult()">Reveal My Rebellion</button>
-    </form>
-  </div>
-
-  <div class="container hidden" id="page4">
-    <h1 id="resultText"></h1>
-    <p>You’ve seen the feathers. Now wear the rebellion.</p>
-    <a href="https://notthebestplacetobuystuff.in" target="_blank">
-      <button class="btn">Enter NotTheBestPlaceToBuyStuff</button>
-    </a>
-  </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
