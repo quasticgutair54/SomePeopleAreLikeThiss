@@ -2,24 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Feather of Rebellion</title>
-  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Choose Your Path</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="script.js" defer></script>
 </head>
-<body class="neutral">
-  <audio id="bg-music" autoplay loop>
-    <source src="Stalling(MP3_160K).mp3" type="audio/mpeg" />
-    Your browser does not support the audio element.
+<body>
+  <audio autoplay loop>
+    <source src="Stalling(MP3_160K).mp3" type="audio/mpeg">
+    Your browser does not support background audio.
   </audio>
 
-  <div class="container" id="page1">
-    <h1>You scanned a bird. Curious or judgmental?</h1>
-    <p>Choose a side:</p>
-    <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
-      <button class="btn" onclick="location.href='curious-q1.html'">I’m curious 🟢</button>
-      <button class="btn" onclick="location.href='judgmental-q1.html'">I’m judgmental 🔴</button>
+  <div class="container">
+    <h1 class="main-title">Choose Your Attitude</h1>
+    <p class="subtitle">This isn’t just a quiz. It’s a rebellion simulator. ✊🦜</p>
+
+    <div class="choice-container">
+      <!-- Curious Section -->
+      <div class="choice-box curious-box">
+        <img src="Bird_Curious.jpeg" alt="Curious Bird" class="bird-image"/>
+        <button onclick="location.href='curious-q1.html'">🟢 I’m Curious</button>
+      </div>
+
+      <!-- Judgmental Section -->
+      <div class="choice-box judgmental-box">
+        <img src="Bird_judgemental..jpeg" alt="Judgmental Bird" class="bird-image"/>
+        <button onclick="location.href='judgmental-q1.html'">🔴 I’m Judgmental</button>
+      </div>
     </div>
   </div>
 </body>
 </html>
+
