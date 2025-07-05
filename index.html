@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,12 +8,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
+
+  <style>
+    body.neutral {
+      background-image: url('background-index.png'); /* replace with actual filename if different */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    body.neutral::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255, 255, 255, 0.4); /* optional overlay for readability */
+      z-index: -1;
+    }
+  </style>
 </head>
 <body class="neutral">
-<audio id="bg-music" autoplay loop>
-  <source src="spring-in-my-step-copyright-free-music-for-youtube-320726.mp3" type="audio/mpeg" />
-</audio>
 
+  <audio id="bg-music" autoplay loop>
+    <source src="spring-in-my-step-copyright-free-music-for-youtube-320726.mp3" type="audio/mpeg" />
+  </audio>
 
   <div class="container">
     <h1 class="main-title">You scanned a bird. Curious or judgmental?</h1>
@@ -31,5 +50,30 @@
       </div>
     </div>
   </div>
+
+  <script>
+    window.addEventListener('load', () => {
+      const music = document.getElementById('bg-music');
+      const src = music?.querySelector('source')?.getAttribute('src') || 'default';
+      const key = 'musicTime_' + src;
+
+      const savedTime = localStorage.getItem(key);
+      if (music && savedTime) {
+        music.currentTime = parseFloat(savedTime);
+      }
+
+      music.play().catch(() => {
+        document.addEventListener('click', () => {
+          music.play();
+        }, { once: true });
+      });
+
+      window.addEventListener('beforeunload', () => {
+        if (music) {
+          localStorage.setItem(key, music.currentTime);
+        }
+      });
+    });
+  </script>
 </body>
 </html>
