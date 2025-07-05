@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Curious Q5</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
   <style>
     body {
@@ -39,6 +39,7 @@
       padding: 12px 24px;
       font-size: 1rem;
       margin-top: 20px;
+      cursor: pointer;
     }
 
     .parrot {
@@ -47,21 +48,10 @@
     }
 
     @media (min-width: 768px) {
-      h1 {
-        font-size: 2.8rem;
-      }
-
-      p {
-        font-size: 1.4rem;
-      }
-
-      select {
-        font-size: 1.1rem;
-      }
-
-      .btn {
-        font-size: 1.1rem;
-      }
+      h1 { font-size: 2.8rem; }
+      p { font-size: 1.4rem; }
+      select { font-size: 1.1rem; }
+      .btn { font-size: 1.1rem; }
     }
   </style>
 </head>
@@ -73,7 +63,7 @@
   <div class="container">
     <h1>🧠 Curious Path - Question 5</h1>
     <p>Do you believe fashion can change minds?</p>
-    <select id="final-select">
+    <select id="answer">
       <option value="">-- Choose your answer --</option>
       <option value="absolutely">Absolutely</option>
       <option value="maybe">Maybe</option>
