@@ -1,8 +1,7 @@
-// Handle question navigation
+// Handle dropdown selection and go to next page
 function goToNextPage(nextPage) {
-  const selected = document.querySelector('select').value;
-  if (selected) {
-    // Save current audio time before navigating
+  const selected = document.querySelector('select');
+  if (selected && selected.value) {
     const music = document.getElementById('bg-music');
     if (music) {
       localStorage.setItem('musicTime', music.currentTime);
@@ -13,28 +12,33 @@ function goToNextPage(nextPage) {
   }
 }
 
-// Resume music
+// Resume music from previous page time
 window.addEventListener('load', () => {
   const music = document.getElementById('bg-music');
   const savedTime = localStorage.getItem('musicTime');
-  if (music && savedTime) {
-    music.currentTime = parseFloat(savedTime);
-  }
 
-  music.play().catch(() => {
-    document.addEventListener('click', () => {
-      music.play();
-    }, { once: true });
-  });
+  if (music) {
+    if (savedTime) {
+      music.currentTime = parseFloat(savedTime);
+    }
+
+    music.play().catch(() => {
+      // If autoplay is blocked, play on first user interaction
+      document.addEventListener('click', () => {
+        music.play();
+      }, { once: true });
+    });
+  }
 });
 
-// Save position before leaving
+// Save music position before navigating away
 window.addEventListener('beforeunload', () => {
   const music = document.getElementById('bg-music');
   if (music) {
     localStorage.setItem('musicTime', music.currentTime);
   }
 });
+
 
 
 
