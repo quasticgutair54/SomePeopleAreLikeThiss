@@ -13,23 +13,28 @@ function goToNextPage(nextPage) {
   }
 }
 
-// Resume music from previous page
+// Resume music
 window.addEventListener('load', () => {
   const music = document.getElementById('bg-music');
+  const savedTime = localStorage.getItem('musicTime');
+  if (music && savedTime) {
+    music.currentTime = parseFloat(savedTime);
+  }
 
+  music.play().catch(() => {
+    document.addEventListener('click', () => {
+      music.play();
+    }, { once: true });
+  });
+});
+
+// Save position before leaving
+window.addEventListener('beforeunload', () => {
+  const music = document.getElementById('bg-music');
   if (music) {
-    const savedTime = localStorage.getItem('musicTime');
-    if (savedTime) {
-      music.currentTime = parseFloat(savedTime);
-    }
-
-    music.play().catch(() => {
-      // fallback: play on first user interaction
-      document.addEventListener('click', () => {
-        music.play();
-      }, { once: true });
-    });
+    localStorage.setItem('musicTime', music.currentTime);
   }
 });
+
 
 
