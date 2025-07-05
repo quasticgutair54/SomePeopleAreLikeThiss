@@ -23,9 +23,11 @@ body.judgmental {
 }
 
 .main-title {
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Cabin Sketch', cursive;
   font-size: 2.5rem;
+  font-weight: 700;
   margin-top: 30px;
+  text-transform: none;
 }
 
 .subtitle {
