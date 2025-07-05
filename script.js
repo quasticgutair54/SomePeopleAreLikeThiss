@@ -3,9 +3,7 @@ function goToNextPage(nextPage) {
   if (selected) {
     window.location.href = nextPage;
   } else {
-    alert("Please select an answer first!");
+    alert("Please select an answer before continuing.");
   }
 }
 
-
- 
