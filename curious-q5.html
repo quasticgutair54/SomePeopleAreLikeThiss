@@ -7,7 +7,7 @@
   <script src="script.js" defer></script>
 </head>
 <body class="curious">
-<audio autoplay loop>
+<audio autoplay loop muted>
   <source src="Stalling(MP3_160K).mp3" type="audio/mpeg">
 </audio>
 
@@ -22,14 +22,8 @@
     <option value="mine">Mine’s already changed</option>
   </select>
   <br><br>
-  <button class="btn" onclick="document.getElementById('verdict').style.display='block'">See Result</button>
+  <button class="btn" onclick="goToNextPage('curious-result.html')">View Result</button>
   <div class="parrot">🦜✨</div>
-
-  <div id="verdict" class="final-verdict" style="display:none;">
-    <p>✅ You scored <strong>86% Rebel</strong> – Certified by <strong>NotTheBest 🦜</strong></p>
-    <p>🎉 You’re a <strong>Curious Rebel</strong>. The best kind. The one who doesn’t just wear change—they wonder why it’s not everywhere yet.</p>
-    <a href="https://notthebestplacetobuystuff.in" class="cta" target="_blank">Enter NotTheBestPlaceToBuyStuff</a>
-  </div>
 </div>
 </body>
 </html>
