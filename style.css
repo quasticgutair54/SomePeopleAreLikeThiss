@@ -2,24 +2,39 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  background: #f4f4f4;
-  color: #111;
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+body.neutral {
+  background: #f4f4f4;
+}
+
+body.curious {
+  background: linear-gradient(to right, #d4fc79, #96e6a1);
+}
+
+body.judgmental {
+  background: linear-gradient(to right, #6f1d1b, #e0c097);
+  color: #fff;
 }
 
 .main-title {
   font-family: 'Permanent Marker', cursive;
   font-size: 2.5rem;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .subtitle {
   font-size: 1.2rem;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .container {
-  padding: 30px;
+  padding: 20px;
   max-width: 800px;
   margin: auto;
 }
@@ -29,6 +44,18 @@ body {
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.choice-box {
+  text-align: center;
+}
+
+.bird-image {
+  width: 150px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 .btn {
@@ -36,32 +63,25 @@ body {
   color: #fff;
   padding: 12px 24px;
   border: none;
-  cursor: pointer;
   font-size: 16px;
   border-radius: 8px;
-  margin-top: 10px;
-  transition: background 0.3s ease;
+  cursor: pointer;
 }
 
 .btn:hover {
   background: #333;
 }
 
-.bird-image {
-  width: 150px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  margin-bottom: 10px;
-}
-
 select {
-  font-size: 1rem;
-  padding: 10px;
   margin-top: 20px;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
 }
 
 .final-verdict {
-  margin-top: 20px;
+  margin-top: 30px;
+  font-size: 1.1rem;
   font-weight: bold;
 }
 
@@ -71,8 +91,8 @@ select {
   background: #000;
   color: #fff;
   padding: 10px 20px;
-  border-radius: 8px;
   text-decoration: none;
+  border-radius: 8px;
 }
 
 .parrot {
