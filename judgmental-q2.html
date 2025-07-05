@@ -4,27 +4,86 @@
 <head>
   <meta charset="UTF-8">
   <title>Judgmental Q2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    select {
+      font-size: 1rem;
+      padding: 10px;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      font-size: 1rem;
+      margin-top: 20px;
+    }
+
+    .parrot {
+      font-size: 2rem;
+      margin-top: 30px;
+    }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 2.8rem;
+      }
+
+      p {
+        font-size: 1.4rem;
+      }
+
+      select {
+        font-size: 1.1rem;
+      }
+
+      .btn {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
 </head>
 <body class="judgmental">
-<audio id="bg-music" autoplay loop>
-  <source src="Stalling(MP3_160K).mp3.mp3" type="audio/mpeg" />
-</audio>
+  <audio id="bg-music" autoplay loop>
+    <source src="Stalling(MP3_160K).mp3.mp3" type="audio/mpeg" />
+  </audio>
 
-<div class="container">
-  <h1>🧠 Judgmental Path - Question 2</h1>
-  <p>What does ‘too much’ mean to you?</p>
-  <select>
-    <option value="">-- Choose your answer --</option>
-    <option value="leopard">Neon leopard print</option>
-    <option value="attention">Attention seeking</option>
-    <option value="fear">Anything I’m scared to try</option>
-    <option value="compliment">A compliment in disguise</option>
-  </select>
-  <br><br>
-  <button class="btn" onclick="goToNextPage('judgmental-q3.html')">Next</button>
-  <div class="parrot">🦜😒</div>
-</div>
+  <div class="container">
+    <h1>🧠 Judgmental Path - Question 2</h1>
+    <p>What does ‘too much’ mean to you?</p>
+    <select>
+      <option value="">-- Choose your answer --</option>
+      <option value="leopard">Neon leopard print</option>
+      <option value="attention">Attention seeking</option>
+      <option value="fear">Anything I’m scared to try</option>
+      <option value="compliment">A compliment in disguise</option>
+    </select>
+    <br><br>
+    <button class="btn" onclick="goToNextPage('judgmental-q3.html')">Next</button>
+    <div class="parrot">🦜😒</div>
+  </div>
 </body>
 </html>
