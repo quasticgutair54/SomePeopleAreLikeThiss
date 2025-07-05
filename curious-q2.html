@@ -3,27 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <title>Curious Q2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    select {
+      font-size: 1rem;
+      padding: 10px;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      font-size: 1rem;
+      margin-top: 20px;
+    }
+
+    .parrot {
+      font-size: 2rem;
+      margin-top: 30px;
+    }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 2.8rem;
+      }
+
+      p {
+        font-size: 1.4rem;
+      }
+
+      select {
+        font-size: 1.1rem;
+      }
+
+      .btn {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
 </head>
 <body class="curious">
-<audio id="bg-music" autoplay loop>
-  <source src="spring-in-my-step-copyright-free-music-for-youtube-320726.mp3" type="audio/mpeg" />
-</audio>
+  <audio id="bg-music" autoplay loop>
+    <source src="spring-in-my-step-copyright-free-music-for-youtube-320726.mp3" type="audio/mpeg" />
+  </audio>
 
-<div class="container">
-  <h1>🧠 Curious Path - Question 2</h1>
-  <p>What would you wear if no one was watching?</p>
-  <select>
-    <option value="">-- Choose your answer --</option>
-    <option value="ridiculous">Something ridiculous and colorful</option>
-    <option value="same">Exactly what I’m wearing now</option>
-    <option value="cape">A cape. Don't ask why.</option>
-    <option value="tee">Probably this tee.</option>
-  </select>
-  <br><br>
-  <button class="btn" onclick="goToNextPage('curious-q3.html')">Next</button>
-  <div class="parrot">🦜✨</div>
-</div>
+  <div class="container">
+    <h1>🧠 Curious Path - Question 2</h1>
+    <p>What would you wear if no one was watching?</p>
+    <select>
+      <option value="">-- Choose your answer --</option>
+      <option value="ridiculous">Something ridiculous and colorful</option>
+      <option value="same">Exactly what I’m wearing now</option>
+      <option value="cape">A cape. Don't ask why.</option>
+      <option value="tee">Probably this tee.</option>
+    </select>
+    <br><br>
+    <button class="btn" onclick="goToNextPage('curious-q3.html')">Next</button>
+    <div class="parrot">🦜✨</div>
+  </div>
 </body>
 </html>
+
