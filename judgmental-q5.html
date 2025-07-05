@@ -11,6 +11,9 @@
       margin: 0;
       padding: 20px;
       box-sizing: border-box;
+      background: linear-gradient(to right, #6f1d1b, #e0c097);
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
     }
 
     .container {
@@ -40,6 +43,10 @@
       font-size: 1rem;
       margin-top: 20px;
       cursor: pointer;
+      background: #fff;
+      color: #111;
+      border: none;
+      border-radius: 8px;
     }
 
     .parrot {
@@ -48,25 +55,15 @@
     }
 
     @media (min-width: 768px) {
-      h1 {
-        font-size: 2.8rem;
-      }
-
-      p {
-        font-size: 1.4rem;
-      }
-
-      select {
-        font-size: 1.1rem;
-      }
-
-      .btn {
-        font-size: 1.1rem;
-      }
+      h1 { font-size: 2.8rem; }
+      p  { font-size: 1.4rem; }
+      select, .btn { font-size: 1.1rem; }
     }
   </style>
 </head>
 <body class="judgmental">
+
+  <!-- Background music -->
   <audio id="bg-music" autoplay loop>
     <source src="Stalling(MP3_160K).mp3.mp3" type="audio/mpeg" />
   </audio>
@@ -74,6 +71,7 @@
   <div class="container">
     <h1>🧠 Judgmental Path - Question 5</h1>
     <p>Do you think rebellion belongs on a t-shirt?</p>
+    
     <select id="answer">
       <option value="">-- Choose your answer --</option>
       <option value="serious">No, rebellion should be serious</option>
@@ -81,10 +79,56 @@
       <option value="bird">Only if the bird approves</option>
       <option value="uncomfortable">Depends how uncomfortable it makes people</option>
     </select>
+    
     <br><br>
     <button class="btn" onclick="goToNextPage('judgmental-result.html')">View Result</button>
+    
     <div class="parrot">🦜😒</div>
   </div>
+
+  <script>
+    // Handle navigation with validation and music time saving
+    function goToNextPage(nextPage) {
+      const selected = document.getElementById('answer');
+      if (selected && selected.value) {
+        const music = document.getElementById('bg-music');
+        if (music) {
+          const src = music.querySelector('source')?.getAttribute('src') || 'default';
+          localStorage.setItem('musicTime_' + src, music.currentTime);
+        }
+        window.location.href = nextPage;
+      } else {
+        alert("Please select an answer before continuing.");
+      }
+    }
+
+    // Resume music
+    window.addEventListener('load', () => {
+      const music = document.getElementById('bg-music');
+      const src = music?.querySelector('source')?.getAttribute('src') || 'default';
+      const savedTime = localStorage.getItem('musicTime_' + src);
+
+      if (music && savedTime) {
+        music.currentTime = parseFloat(savedTime);
+      }
+
+      music?.play().catch(() => {
+        document.addEventListener('click', () => {
+          music.play();
+        }, { once: true });
+      });
+    });
+
+    // Save time before exit
+    window.addEventListener('beforeunload', () => {
+      const music = document.getElementById('bg-music');
+      if (music) {
+        const src = music.querySelector('source')?.getAttribute('src') || 'default';
+        localStorage.setItem('musicTime_' + src, music.currentTime);
+      }
+    });
+  </script>
 </body>
 </html>
+
 
