@@ -39,6 +39,7 @@
       padding: 12px 24px;
       font-size: 1rem;
       margin-top: 20px;
+      cursor: pointer;
     }
 
     .parrot {
@@ -64,6 +65,25 @@
       }
     }
   </style>
-</he
+</head>
+<body class="judgmental">
+  <audio id="bg-music" autoplay loop>
+    <source src="Stalling(MP3_160K).mp3.mp3" type="audio/mpeg" />
+  </audio>
 
-
+  <div class="container">
+    <h1>🧠 Judgmental Path - Question 5</h1>
+    <p>Do you think rebellion belongs on a t-shirt?</p>
+    <select id="answer">
+      <option value="">-- Choose your answer --</option>
+      <option value="serious">No, rebellion should be serious</option>
+      <option value="cool">Maybe, if it looks cool</option>
+      <option value="bird">Only if the bird approves</option>
+      <option value="uncomfortable">Depends how uncomfortable it makes people</option>
+    </select>
+    <br><br>
+    <button class="btn" onclick="goToNextPage('judgmental-result.html')">View Result</button>
+    <div class="parrot">🦜😒</div>
+  </div>
+</body>
+</html>
