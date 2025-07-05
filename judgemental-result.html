@@ -1,7 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Your Judgment Score</title>
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
   <style>
@@ -11,42 +13,53 @@
       font-family: 'Roboto', sans-serif;
       text-align: center;
       margin: 0;
-      padding: 0;
+      padding: 40px 20px;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      box-sizing: border-box;
     }
+
     h1 {
       font-family: 'Permanent Marker', cursive;
-      font-size: 3.5rem;
+      font-size: 2.8rem;
       margin-bottom: 20px;
+      line-height: 1.2;
     }
+
     p {
-      font-size: 1.4rem;
-      max-width: 600px;
+      font-size: 1.1rem;
+      max-width: 90%;
+      line-height: 1.6;
+      margin: 0 auto 30px;
     }
+
     .cta {
-      margin-top: 30px;
       background: #fff;
       color: #111;
-      padding: 12px 24px;
+      padding: 14px 28px;
       text-decoration: none;
       border-radius: 10px;
       font-weight: bold;
       font-size: 1rem;
+      display: inline-block;
+    }
+
+    @media (min-width: 600px) {
+      h1 { font-size: 3.5rem; }
+      p { font-size: 1.3rem; max-width: 600px; }
     }
   </style>
 </head>
 <body>
-<audio id="bg-music" autoplay loop>
-  <source src="Stalling(MP3_160K).mp3.mp3" type="audio/mpeg" />
-</audio>
+  <audio id="bg-music" autoplay loop>
+    <source src="Stalling(MP3_160K).mp3.mp3" type="audio/mpeg" />
+  </audio>
 
   <h1>You're 85% Judgmental Certified by NotTheBest 🦜</h1>
   <p>Turns out judgment has style. You notice. You react. And whether you're silent or savage, you've joined the rebellion. Fashion might’ve made you flinch… but you didn’t walk away.</p>
   <a class="cta" href="https://notthebestplacetobuystuff.in" target="_blank">Enter NotTheBestPlaceToBuyStuff</a>
 </body>
 </html>
-
